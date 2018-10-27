@@ -1,5 +1,5 @@
 {
-  "name": "ClickFlicks",
+  "name": "clickflicks",
   "version": "1.0.0",
   "main": "server/server.js",
   "engines": {
@@ -11,16 +11,21 @@
     "posttest": "npm run lint"
   },
   "dependencies": {
+    "aws-sdk": "^2.344.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "dotenv": "^6.1.0",
     "helmet": "^3.10.0",
+    "loopback": "^3.22.0",
     "loopback-boot": "^2.6.5",
-    "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^3.0.0",
     "loopback-component-explorer": "^6.2.0",
-    "loopback": "^3.22.0"
+    "multiparty": "^4.2.1",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.0.0"
   },
   "devDependencies": {
+    "@types/node": "^10.12.0",
+    "@types/loopback": "^3.2.6",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0"
   },
