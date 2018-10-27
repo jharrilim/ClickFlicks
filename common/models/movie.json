@@ -1,0 +1,37 @@
+{
+  "name": "movie",
+  "plural": "movies",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "date",
+      "required": true
+    },
+    "comments": {
+      "type": [
+        "comment"
+      ]
+    },
+    "ratings": {
+      "type": [
+        "rating"
+      ]
+    },
+    "fileUri": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
