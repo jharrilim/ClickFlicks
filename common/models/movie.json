@@ -17,17 +17,17 @@
     },
     "comments": {
       "type": [
-        "comment"
+        "string"
       ]
     },
     "ratings": {
       "type": [
-        "rating"
+        "string"
       ]
     },
     "fileUri": {
       "type": "string",
-      "required": true
+      "required": false
     }
   },
   "validations": [],

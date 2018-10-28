@@ -1,7 +1,7 @@
 'use strict';
 
-const { getFileFromRequest, uploadFileToS3 } = require('../../file-handler');
-
+const { getFileFromRequest } = require('../../file-handler');
+const uploadFileToS3 = require('../../aws').uploadFile;
 module.exports = function(Movie) {
   Movie.uploadMovie = async (id, req) => {
     // Get the movie instance
@@ -15,7 +15,7 @@ module.exports = function(Movie) {
     // upload the file
     const { Location, ETag, Bucket, Key } = await uploadFileToS3(file);
 
-    // save the data to the frog how ever you want
+    // save the data to the movie how ever you want
     await movie.updateAttributes({
       link: Location,
       etag: ETag,
@@ -23,7 +23,7 @@ module.exports = function(Movie) {
       image: Key,
     });
 
-    // return the updated frog instance
+    // return the updated movie instance
     return movie;
   };
 
